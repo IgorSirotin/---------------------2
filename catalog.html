@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Каталог керамики мастерской Тихий круг: кружки, вазы и тарелки.">
+	<title>Каталог — Тихий круг</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="interactions.js" defer></script>
+</head>
+<body>
+	<a class="skip-link" href="#main">Перейти к содержимому</a>
+	<div class="site-shell">
+		<header class="site-header">
+			<a class="brand" href="index.html" aria-label="Тихий круг — главная">
+				<img src="Assets/logo.svg" alt="Логотип мастерской Тихий круг" width="48" height="48">
+				<span class="brand-name">тихий круг<small>керамическая мастерская</small></span>
+			</a>
+			<p class="header-note">Учебный сайт · <time id="live-clock">--:--:--</time></p>
+			<nav class="main-nav" aria-label="Главное меню">
+				<a href="index.html">Главная</a>
+				<a href="catalog.html" aria-current="page">Каталог</a>
+				<a href="orders.html">Заказ</a>
+				<div class="nav-dropdown">
+					<button class="dropdown-toggle" type="button" aria-expanded="false">Разделы</button>
+					<div class="dropdown-menu" hidden>
+						<a href="index.html#about">О мастерской</a>
+						<a href="catalog.html#materials">Материалы</a>
+						<a href="orders.html#order-form">Оставить заявку</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<main id="main" class="section-wrap page-content">
+			<div class="page-heading">
+				<p class="eyebrow">Изделия из глины</p>
+				<h1>Каталог</h1>
+				<p class="page-lead">В каталоге представлены несколько изделий мастерской. Размер и цена указаны под каждой фотографией.</p>
+			</div>
+
+			<div class="catalog-layout">
+				<aside class="catalog-aside" id="materials" aria-label="О коллекции">
+					<h2>О материалах</h2>
+					  <p>Для изделий используем каменную массу и шамотную глину. Посуду можно использовать для еды и напитков.</p>
+					<dl class="material-list">
+						<div><dt>Глина</dt><dd>каменная масса, шамот</dd></div>
+						<div><dt>Обжиг</dt><dd>до 1220 °C</dd></div>
+						<div><dt>Уход</dt><dd>посудомоечная машина</dd></div>
+					</dl>
+					  <p class="aside-note">Изделия могут немного отличаться друг от друга.</p>
+				</aside>
+
+				<div class="catalog-main">
+					<div class="product-grid catalog-grid">
+						<article class="product-card" id="cup" data-kind="catalog">
+							<a class="product-image-link" href="orders.html?item=cup" aria-label="Заказать кружку «Утро»">
+								<img src="Assets/cup.jpg" data-hover-src="Assets/ceramics.jpg" alt="Кружка ручной работы">
+							</a>
+							<div class="product-meta"><h2>Кружка «Утро»</h2><span>1 800 ₽</span></div>
+							<p>280 мл · песочная глазурь</p>
+							<a class="text-link" href="orders.html?item=cup">Выбрать <span aria-hidden="true">→</span></a>
+						</article>
+						<article class="product-card" id="vase" data-kind="catalog">
+							<a class="product-image-link" href="orders.html?item=vase" aria-label="Заказать вазу «Течение»">
+								<img src="Assets/vase.jpg" data-hover-src="Assets/cup.jpg" alt="Мастер формует керамическую вазу на гончарном круге">
+							</a>
+							<div class="product-meta"><h2>Ваза «Течение»</h2><span>3 600 ₽</span></div>
+							<p>18 см · молочная глазурь</p>
+							<a class="text-link" href="orders.html?item=vase">Выбрать <span aria-hidden="true">→</span></a>
+						</article>
+						<article class="product-card" id="plate" data-kind="catalog">
+							<a class="product-image-link" href="orders.html?item=plate" aria-label="Заказать тарелку «Берег»">
+								<img src="Assets/ceramics.jpg" data-hover-src="Assets/vase.jpg" alt="Керамическая посуда с естественной фактурой">
+							</a>
+							<div class="product-meta"><h2>Тарелка «Берег»</h2><span>2 400 ₽</span></div>
+							<p>22 см · шамотная глина</p>
+							<a class="text-link" href="orders.html?item=plate">Выбрать <span aria-hidden="true">→</span></a>
+						</article>
+						<article class="product-card" id="bowl" data-kind="catalog">
+							<a class="product-image-link" href="orders.html?item=bowl" aria-label="Заказать пиалу «Соль»">
+								<img src="Assets/vase.jpg" data-hover-src="Assets/cup.jpg" alt="Мастер формует керамическую пиалу на гончарном круге">
+							</a>
+							<div class="product-meta"><h2>Пиала «Соль»</h2><span>1 500 ₽</span></div>
+							<p>320 мл · крапчатая глазурь</p>
+							<a class="text-link" href="orders.html?item=bowl">Выбрать <span aria-hidden="true">→</span></a>
+						</article>
+					</div>
+				</div>
+			</div>
+
+			<section class="price-section" aria-labelledby="price-title">
+				<p class="eyebrow">Коротко о размерах и стоимости</p>
+				<h2 id="price-title">Таблица изделий</h2>
+				<div class="table-scroll">
+					<table>
+						<caption>Основные характеристики изделий из каталога</caption>
+						<thead><tr><th scope="col">Изделие</th><th scope="col">Размер</th><th scope="col">Материал</th><th scope="col">Цена</th></tr></thead>
+						<tbody>
+							<tr><th scope="row">Кружка «Утро»</th><td>280 мл</td><td>Каменная масса</td><td>1 800 ₽</td></tr>
+							<tr><th scope="row">Ваза «Течение»</th><td>18 см</td><td>Каменная масса</td><td>3 600 ₽</td></tr>
+							<tr><th scope="row">Тарелка «Берег»</th><td>22 см</td><td>Шамотная глина</td><td>2 400 ₽</td></tr>
+							<tr><th scope="row">Пиала «Соль»</th><td>320 мл</td><td>Каменная масса</td><td>1 500 ₽</td></tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<p class="catalog-footnote">Цвет на экране может отличаться от реального. <a href="orders.html">Оставить заявку</a>.</p>
+		</main>
+
+		<footer class="site-footer">
+			<a class="brand brand-footer" href="index.html"><img src="Assets/logo.svg" alt="" width="40" height="40"><span class="brand-name">тихий круг<small>керамическая мастерская</small></span></a>
+			<p>Учебный сайт по HTML и CSS.</p>
+		</footer>
+	</div>
+</body>
+</html>

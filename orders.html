@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Оформить заказ на керамику ручной работы мастерской Тихий круг.">
+	<title>Заказ — Тихий круг</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="interactions.js" defer></script>
+</head>
+<body>
+	<a class="skip-link" href="#main">Перейти к содержимому</a>
+	<div class="site-shell">
+		<header class="site-header">
+			<a class="brand" href="index.html" aria-label="Тихий круг — главная">
+				<img src="Assets/logo.svg" alt="Логотип мастерской Тихий круг" width="48" height="48">
+				<span class="brand-name">тихий круг<small>керамическая мастерская</small></span>
+			</a>
+			<p class="header-note">Учебный сайт · <time id="live-clock">--:--:--</time></p>
+			<nav class="main-nav" aria-label="Главное меню">
+				<a href="index.html">Главная</a>
+				<a href="catalog.html">Каталог</a>
+				<a href="orders.html" aria-current="page">Заказ</a>
+				<div class="nav-dropdown">
+					<button class="dropdown-toggle" type="button" aria-expanded="false">Разделы</button>
+					<div class="dropdown-menu" hidden>
+						<a href="index.html#about">О мастерской</a>
+						<a href="catalog.html#materials">Материалы</a>
+						<a href="orders.html#order-form">Оставить заявку</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<main id="main" class="section-wrap page-content">
+			<div class="page-heading">
+				<p class="eyebrow">Связаться с мастерской</p>
+				<h1>Заказ и доставка</h1>
+				<p class="page-lead">Заполните форму, чтобы узнать о наличии изделия или обсудить индивидуальный заказ.</p>
+			</div>
+
+			<div class="order-layout">
+				<section class="order-form-section" id="order-form" aria-labelledby="form-title">
+					<h2 id="form-title">Оставить заявку</h2>
+					<p class="form-intro">Поля со звёздочкой обязательны для заполнения.</p>
+					<form class="order-form" action="#">
+						<div class="form-row">
+							<label for="customer-name">Ваше имя <span aria-hidden="true">*</span></label>
+							<input id="customer-name" name="Имя" type="text" autocomplete="name">
+						</div>
+						<div class="form-row">
+							<label for="customer-email">Электронная почта <span aria-hidden="true">*</span></label>
+							<input id="customer-email" name="Почта" type="text" autocomplete="email">
+						</div>
+						<div class="form-row">
+							<label for="quantity">Количество <span aria-hidden="true">*</span></label>
+							<input id="quantity" name="Количество" type="text" value="1">
+						</div>
+						<div class="form-row">
+							<label for="product">Что вам понравилось?</label>
+							<select id="product" name="Изделие">
+								<option value="">Пока выбираю</option>
+								<option value="Кружка «Утро»" data-price="1 800 ₽">Кружка «Утро»</option>
+								<option value="Ваза «Течение»" data-price="3 600 ₽">Ваза «Течение»</option>
+								<option value="Тарелка «Берег»" data-price="2 400 ₽">Тарелка «Берег»</option>
+								<option value="Пиала «Соль»" data-price="1 500 ₽">Пиала «Соль»</option>
+								<option value="Индивидуальный заказ" data-price="уточняется">Индивидуальный заказ</option>
+							</select>
+							<small class="field-hint" id="product-hint">Выберите изделие, чтобы увидеть цену.</small>
+						</div>
+						<fieldset class="form-row delivery-options">
+							<legend>Как удобнее получить заказ?</legend>
+							<label><input type="radio" name="Доставка" value="Самовывоз" checked> Самовывоз</label>
+							<label><input type="radio" name="Доставка" value="Доставка"> Доставка</label>
+						</fieldset>
+						<div class="form-row">
+							<label for="customer-message">Комментарий или пожелание</label>
+							<textarea id="customer-message" name="Комментарий" rows="4" placeholder="Расскажите о цвете, размере или сроках"></textarea>
+						</div>
+						<label class="consent-row"><input type="checkbox" name="Согласие"> Я согласен(на) на обработку данных для ответа на заявку.</label>
+						<button class="button button-dark" type="submit">Отправить заявку <span aria-hidden="true">↗</span></button>
+						<p class="form-note" id="form-status" role="status" aria-live="polite">Заполните поля и отправьте заявку.</p>
+					</form>
+				</section>
+
+				<aside class="order-aside" aria-labelledby="delivery-title">
+					  <img class="order-image" src="Assets/ceramics.jpg" alt="Керамическая посуда с естественной фактурой">
+					<h2 id="delivery-title">Как всё устроено</h2>
+					<ol class="steps-list">
+						<li><span>01</span><div><strong>Обсуждаем</strong><p>Проверяем наличие и отвечаем на вопросы.</p></div></li>
+						<li><span>02</span><div><strong>Готовим</strong><p>Если изделия нет, согласуем срок создания.</p></div></li>
+						<li><span>03</span><div><strong>Передаём</strong><p>Упаковываем заказ и выбираем удобный способ получения.</p></div></li>
+					</ol>
+					<p class="aside-note">Каждая вещь надёжно упаковывается в бумагу и защитный наполнитель.</p>
+					<a class="text-link" href="catalog.html">Вернуться в каталог <span aria-hidden="true">→</span></a>
+				</aside>
+			</div>
+		</main>
+
+		<footer class="site-footer">
+			<a class="brand brand-footer" href="index.html"><img src="Assets/logo.svg" alt="" width="40" height="40"><span class="brand-name">тихий круг<small>керамическая мастерская</small></span></a>
+			<p>Учебный сайт по HTML и CSS.</p>
+		</footer>
+	</div>
+</body>
+</html>

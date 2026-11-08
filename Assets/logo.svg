@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Эмблема мастерской Тихий круг</title>
+  <circle cx="32" cy="32" r="30" fill="#526553"/>
+  <path d="M22 18h20l-2 8c-1 4-2 6-2 10 0 5 4 8 4 12H22c0-4 4-7 4-12 0-4-1-6-2-10l-2-8Z" fill="#f5f2e9"/>
+  <path d="M22 18h20M25 29c5 3 9 3 14 0" fill="none" stroke="#b86445" stroke-linecap="round" stroke-width="2.5"/>
+  <path d="M22 48h20" fill="none" stroke="#d5b393" stroke-linecap="round" stroke-width="2"/>
+</svg>

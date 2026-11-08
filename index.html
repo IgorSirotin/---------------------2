@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Керамика ручной работы для повседневных ритуалов.">
+	<title>Тихий круг — керамика ручной работы</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="interactions.js" defer></script>
+</head>
+<body>
+	<a class="skip-link" href="#main">Перейти к содержимому</a>
+	<div class="site-shell">
+		<header class="site-header">
+			<a class="brand" href="index.html" aria-label="Тихий круг — главная">
+				<img src="Assets/logo.svg" alt="Логотип мастерской Тихий круг" width="48" height="48">
+				<span class="brand-name">тихий круг<small>керамическая мастерская</small></span>
+			</a>
+			<p class="header-note">Учебный сайт · <time id="live-clock">--:--:--</time></p>
+			<nav class="main-nav" aria-label="Главное меню">
+				<a href="index.html" aria-current="page">Главная</a>
+				<a href="catalog.html">Каталог</a>
+				<a href="orders.html">Заказ</a>
+				<div class="nav-dropdown">
+					<button class="dropdown-toggle" type="button" aria-expanded="false">Разделы</button>
+					<div class="dropdown-menu" hidden>
+						<a href="index.html#about">О мастерской</a>
+						<a href="catalog.html#materials">Материалы</a>
+						<a href="orders.html#order-form">Оставить заявку</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<main id="main">
+			<section class="home-hero" aria-labelledby="hero-title">
+				<img class="hero-image" src="Assets/ceramics.jpg" alt="Керамические изделия ручной работы в мастерской">
+				<div class="hero-copy">
+					<p class="eyebrow">Керамика ручной работы</p>
+					<h1 id="hero-title">Керамика<br>для дома</h1>
+					<p>В мастерской мы делаем кружки, вазы и тарелки из глины. Здесь можно посмотреть изделия и оставить заявку.</p>
+					<a class="button button-light" href="catalog.html">Открыть каталог</a>
+				</div>
+				<p class="hero-caption">Изделия мастерской</p>
+			</section>
+
+			<section class="intro-section section-wrap" id="about" aria-labelledby="intro-title">
+				<div class="section-heading">
+					  <p class="eyebrow">О проекте</p>
+					  <h2 id="intro-title">О мастерской</h2>
+				</div>
+				<div class="intro-copy">
+					  <p>В мастерской изготавливают посуду небольшими партиями. Изделия обжигают в печи и покрывают глазурью.</p>
+					<ul class="value-list">
+						<li><span>01</span> Небольшие серии и ручная работа</li>
+						<li><span>02</span> Безопасная глазурь для ежедневного использования</li>
+						<li><span>03</span> Бережная упаковка без лишнего пластика</li>
+					</ul>
+					<a class="text-link" href="orders.html">Расскажите, что ищете <span aria-hidden="true">→</span></a>
+				</div>
+			</section>
+
+			<section class="featured-section" aria-labelledby="featured-title">
+				<div class="section-wrap">
+					<div class="section-title-row">
+						<div>
+							  <p class="eyebrow">Несколько примеров</p>
+							  <h2 id="featured-title">Популярные изделия</h2>
+						</div>
+						<a class="text-link" href="catalog.html">Весь каталог <span aria-hidden="true">→</span></a>
+						<button class="button button-light random-button" id="random-pick" type="button">Случайное изделие</button>
+					</div>
+					<p class="interaction-message" id="featured-status" aria-live="polite"></p>
+					<div class="product-grid">
+						<article class="product-card" data-kind="featured">
+							<a class="product-image-link" href="catalog.html#cup" aria-label="Кружка «Утро», подробнее в каталоге">
+								<img src="Assets/cup.jpg" data-hover-src="Assets/ceramics.jpg" alt="Керамическая кружка ручной работы">
+							</a>
+							<div class="product-meta"><h3>Кружка «Утро»</h3><span>1 800 ₽</span></div>
+							<p>Песочная глазурь, 280 мл</p>
+						</article>
+						<article class="product-card" data-kind="featured">
+							<a class="product-image-link" href="catalog.html#vase" aria-label="Ваза «Течение», подробнее в каталоге">
+								<img src="Assets/vase.jpg" data-hover-src="Assets/cup.jpg" alt="Мастер формует керамическую вазу на гончарном круге">
+							</a>
+							<div class="product-meta"><h3>Ваза «Течение»</h3><span>3 600 ₽</span></div>
+							<p>Молочная глазурь, 18 см</p>
+						</article>
+						<article class="product-card" data-kind="featured">
+							<a class="product-image-link" href="catalog.html#plate" aria-label="Тарелка «Берег», подробнее в каталоге">
+								<img src="Assets/ceramics.jpg" data-hover-src="Assets/vase.jpg" alt="Керамическая тарелка с фактурным краем">
+							</a>
+							<div class="product-meta"><h3>Тарелка «Берег»</h3><span>2 400 ₽</span></div>
+							<p>Шамотная глина, 22 см</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section class="quote-section section-wrap" id="materials">
+				<p class="eyebrow">Материалы</p>
+				<blockquote>Для работы используем каменную массу и шамотную глину.</blockquote>
+				<p class="quote-credit">Все изделия можно использовать каждый день.</p>
+				<button class="button button-light" id="inline-tip-button" type="button">Показать подсказку</button>
+				<p id="inline-tip" hidden>Керамику лучше хранить в сухом месте.</p>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<a class="brand brand-footer" href="index.html">
+				<img src="Assets/logo.svg" alt="" width="40" height="40">
+				<span class="brand-name">тихий круг<small>керамическая мастерская</small></span>
+			</a>
+			<p>Учебный сайт по HTML и CSS.</p>
+		</footer>
+	</div>
+	<script>
+		document.getElementById("inline-tip-button").addEventListener("click", function () {
+			const tip = document.getElementById("inline-tip");
+			tip.hidden = !tip.hidden;
+			this.textContent = tip.hidden ? "Показать подсказку" : "Скрыть подсказку";
+		});
+	</script>
+</body>
+</html>
